@@ -1,11 +1,9 @@
-.App {
-  
-}
 .title {
   color: white;
   font-weight: bolder;
   font-size: 55px;
 }
+
 .header {
   background-color: rgb(61, 181, 221);
   display: flex;
@@ -14,6 +12,7 @@
   align-items: center;
   text-align: center;
 }
+
 .header input{
   margin-top: 40px;
   width: 400px;
@@ -25,7 +24,9 @@
   border-radius: 5px;
   border: 0px solid transparent;
   text-align: center;
+  outline: none;
 }
+
 .header button{
   margin-top: 40px;
   width: 200px;
@@ -37,16 +38,20 @@
   font-size: 22px;
   display: flex;
   flex-direction: column;
+  transition: 0.2s;
 }
+
 .header button:hover{
   cursor: pointer;
   color: white;
   background-color: lightblue;
   font-weight: 1000px;
 }
+
 .display{
   text-align: center;
 }
+
 .pokePic{
   position: absolute;
   top: 550px;
@@ -56,16 +61,20 @@
   background-color: lightblue;
   border-radius: 40px;
   opacity: 40%;
+  transition: 0.2s;
 }
+
 .pokePic:hover{
   background-color: rgb(116, 192, 228);
   opacity: 100%;
   box-shadow: 0px 2px 3px 4px rgb(50, 143, 187);
 }
+
 .pokePic img{
   width: 500px;
   height: 500px;
 }
+
 .info{
   width: 500px;
   margin-left: 16in;

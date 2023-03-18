@@ -17,7 +17,8 @@ function App() {
   });
 
   const searchPoke = () => {
-    Axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`).then((response) =>
+    Axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+    .then((response) =>
     {
       setPokemon({
         name: pokemon, 
@@ -35,8 +36,8 @@ function App() {
     <div className="App">
       <div className="header">
         <h1 className="title">Pokedex</h1>
-          <input type="text" onChange={(event) => {setPoke(event.target.value);}}/>
-          <button onClick={searchPoke}>submit</button>
+          <input type="text" onChange={(event) => {setPoke(event.target.value);}} required/>
+          <button onClick={searchPoke}>Find Pokemon!</button>
       </div>
           <div className="display">
 
