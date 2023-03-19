@@ -8,21 +8,19 @@
   background-color: rgb(61, 181, 221);
   display: flex;
   flex-direction: column;
-  height: 400px;
+  justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 1rem 0 3rem 0;
 }
 
 .header input{
-  margin-top: 40px;
   width: 400px;
-  height: 50px;
-  display: flex;
-  flex-direction: column;
+  height: 30px;
   padding: 10px;
-  font-size: 30px;
+  font-size: 20px;
   border-radius: 5px;
-  border: 0px solid transparent;
+  border: none;
   text-align: center;
   outline: none;
 }
@@ -31,57 +29,55 @@
   margin-top: 40px;
   width: 200px;
   height: 50px;
-  align-items: center;
-  justify-content: center;
+  background-color: lightblue;
+  color: white;
   border-radius: 10px;
   border: 1px solid white;
   font-size: 22px;
-  display: flex;
-  flex-direction: column;
   transition: 0.2s;
 }
 
 .header button:hover{
   cursor: pointer;
-  color: white;
-  background-color: lightblue;
-  font-weight: 1000px;
+  color: black;
+  background-color: white;
 }
 
 .display{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
   text-align: center;
+  padding: 5rem 0 5rem 0;
 }
 
 .pokePic{
-  position: absolute;
-  top: 550px;
-  margin-left: 450px;
-  height: 500px;
-  width: 500px;
-  background-color: lightblue;
+  height: 300px;
+  width: 300px;
+  padding: 10px;
+  background-color: rgba(78, 184, 219, 0.835);
   border-radius: 40px;
-  opacity: 40%;
   transition: 0.2s;
 }
 
 .pokePic:hover{
-  background-color: rgb(116, 192, 228);
-  opacity: 100%;
   box-shadow: 0px 2px 3px 4px rgb(50, 143, 187);
 }
 
 .pokePic img{
-  width: 500px;
-  height: 500px;
+  width: 250px;
+  height: 250px;
 }
 
-.info{
-  width: 500px;
-  margin-left: 16in;
-  margin-top: 2in;
-  padding-top: 12px;
-  padding-bottom: 12px;
+.display .info{
+  padding: 12px;
   background-color: rgba(78, 184, 219, 0.835);
   border-radius: 20px;
   color: white;
+  transition: 0.2s;
+}
+
+.display .info:hover{
+  box-shadow: 0px 2px 3px 4px rgb(50, 143, 187);
 }

@@ -8,7 +8,6 @@ function App() {
   const [pokemon, setPoke] = useState("");
   const [poke, setPokemon] = useState({
     name: "", 
-    species: "", 
     img: "", 
     hp: "",
     weight: "",
@@ -22,7 +21,6 @@ function App() {
     {
       setPokemon({
         name: pokemon, 
-        species: response.data.species.name, 
         img: response.data.sprites.front_default, 
         weight: response.data.weight,
         height: response.data.height,
@@ -32,32 +30,30 @@ function App() {
   }
 
   return (
-  <>
     <div className="App">
       <div className="header">
-        <h1 className="title">Pokedex</h1>
-          <input type="text" onChange={(event) => {setPoke(event.target.value);}} required/>
+          <h1 className="title">Pokedex</h1>
+          <input 
+            placeholder='type name of pokemon here...'
+            type="text" 
+            onChange={(event) => {setPoke(event.target.value)}} 
+          />
           <button onClick={searchPoke}>Find Pokemon!</button>
       </div>
-          <div className="display">
-
-            <div className="info">
-              <h1>Name: {poke.name}</h1>
-              <h1>Species: {poke.species}</h1>
-              <h1>HP: {poke.hp}</h1>
-              <h1>Weight: {poke.weight}</h1>
-              <h1>Height: {poke.height}</h1>
-              <h1>Base Experience: {poke.base}</h1>
-            </div>
-
-            <div className="pokePic">
-              <img src={poke.img} alt="pokepic"/>
-            </div>
-
-          </div>
+      <div className="display">
+        <div className="pokePic">
+          <img src={poke.img} alt=""/>
+        </div>
+        <div className="info">
+          <h3>Name: {poke.name}</h3>
+          <h3>HP: {poke.hp}</h3>
+          <h3>Weight: {poke.weight}</h3>
+          <h3>Height: {poke.height}</h3>
+          <h3>Base Experience: {poke.base}</h3>
+        </div>
+      </div>
     </div>    
-  </>
-  );
+  )
 }
 
 export default App;
